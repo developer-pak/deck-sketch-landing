@@ -14,7 +14,7 @@ export default function Saas_Section1() {
                     <p className="note align-center">No credit card requiment</p>
                     <div className="images layout-05 mt60">
                         <div className="inner">
-                            <img className="img01 wow animate__animated animate__fadeInUp" src="/assets/images/GIF%20-%20DECKSKETCH%20(1).gif" alt="DeckSketch demo" />
+                            <img className="img01 wow animate__animated animate__fadeInUp" src="/assets/images/hero-gif.gif" alt="DeckSketch demo" />
                             <img className="img02 wow animate__animated animate__zoomIn" data-wow animate__animated-delay="0.5s" src="/assets/images/saas-02.png" alt="Image" />
                             <img className="img03 wow animate__animated animate__zoomIn" data-wow animate__animated-delay="0.3s" src="/assets/images/saas-03.png" alt="Image" />
                             <img className="img04 wow animate__animated animate__zoomIn" data-wow animate__animated-delay="0.1s" src="/assets/images/saas-04.png" alt="Image" />

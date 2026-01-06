@@ -1,4 +1,7 @@
+import { useState } from 'react';
+
 export default function Saas_Section2() {
+    const [showVideo, setShowVideo] = useState(false);
 
     return (
         <>
@@ -11,11 +14,28 @@ export default function Saas_Section2() {
                     <div className="row flex-align-c">
                         <div className="col-lg-7">
                             <div className="block-video">
-                                <div className="popup-wrapper ratio br20" style={{ aspectRatio: 3 / 2 }}>
+                                <div className="popup-wrapper ratio br20" style={{ aspectRatio: 3 / 2, position: 'relative', cursor: 'pointer' }}>
+                                    {!showVideo && (
+                                        <div 
+                                            onClick={() => setShowVideo(true)}
+                                            style={{
+                                                position: 'absolute',
+                                                top: 0,
+                                                left: 0,
+                                                width: '100%',
+                                                height: '100%',
+                                                backgroundImage: 'url(/assets/images/thumbnail-video.png)',
+                                                backgroundSize: 'cover',
+                                                backgroundPosition: 'center',
+                                                borderRadius: '20px',
+                                                zIndex: 1
+                                            }}
+                                        />
+                                    )}
                                     <iframe
-                                        src="https://drive.google.com/file/d/1wXmNo_7xeOdctONPApy2nzS2DkZcaG2r/preview"
+                                        src={showVideo ? "https://drive.google.com/file/d/1wXmNo_7xeOdctONPApy2nzS2DkZcaG2r/preview" : "about:blank"}
                                         title="DeckSketch demo"
-                                        style={{ width: '100%', height: '100%', border: 0 }}
+                                        style={{ width: '100%', height: '100%', border: 0, borderRadius: '20px' }}
                                         allow="autoplay; fullscreen"
                                         allowFullScreen
                                     />
